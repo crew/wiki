@@ -7,7 +7,7 @@ network.
 
 
 ```notice
-Notice: this will change with v2 of the Crew Network which will be built soon
+Notice: This will change with v2 of the Crew Network which will be built soon
 ```
 
 
@@ -68,27 +68,14 @@ if the SSH tunnel dies (you closed your computer without logging out)
 Manual Connection
 -----------------
 
-To connect manually open terminal and type the following command replacing the
+To connect manually, open terminal and type the following command replacing the
 bracketed text with your info:
 
-`ssh -D <rand int 8000 - 65535> <ccis username>@alpha.ccs.neu.edu`
-
-For example I enter: `ssh -D 56463 hurtige@alpha.ccs.neu.edu`
-
-
-
-Then go to System Preferences \> Network \> (Your active internet connection)
-
-
-
-Click the `Advanced` button then go to the `Proxies` Tab
-
-
-Check `SOCKS Proxy` and enter `localhost` and the port number in the two boxes
-under `SOCKS Proxy Server`
-
-
-Click `OK` then `Apply`
+* `# ssh -D <rand int 8000 - 65535> <ccis username>@alpha.ccs.neu.edu`
+* Then go to System Preferences \> Network \> (Your active internet connection)
+* Click the `Advanced` button then go to the `Proxies` Tab
+* Check `SOCKS Proxy` and under `SOCKS Proxy Server` enter `localhost` and the port number you chose before in the two boxes 
+* Click `OK` then `Apply`
 
 
 
