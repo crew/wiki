@@ -2,8 +2,15 @@ Logging Into Crew Remotely
 ===========================
 
 If you want to get work done remotely then here is how you login to the crew
-network.  Note that this will change with v2 of the Crew Network which will be
-built soon
+network.  
+
+
+
+```notice
+Notice: this will change with v2 of the Crew Network which will be built soon
+```
+
+
 
 Mac
 ---
@@ -12,22 +19,21 @@ We are going to use a SOCKS proxy to proxy all your traffic though to the crew
 network.  This is similar to a VPN but instead of using a VPN Client we are
 using SSH.
 
-[^]: **Automatic Connection**
-
-
+Automatic Connection
+--------------------
 
 To automatically connect and disconnect the SOCKS proxy use this script
 
 
+```bash
+#!/bin/bash
 
-`#!/bin/bash`
+networksetup -setsocksfirewallproxystate Wi-Fi on
 
-`networksetup -setsocksfirewallproxystate Wi-Fi on`
+ssh -D <rand int 8000 - 65535> <ccis username>@alpha.ccs.neu.edu
 
-`ssh -D <rand int 8000 - 65535> <ccis username>@alpha.ccs.neu.edu`
-
-`networksetup -setsocksfirewallproxystate Wi-Fi off`
-
+networksetup -setsocksfirewallproxystate Wi-Fi off
+```
 
 
 You can place it in you home directory (~) and name it something like crew.sh
@@ -37,7 +43,6 @@ Make it executable `chmod +x ~/crew.sh`
 
 
 To connect: `sudo ~/crew.sh`
-
 
 
 The benefit of this method is that it will automatically disable the SOCKS proxy
@@ -60,7 +65,8 @@ if the SSH tunnel dies (you closed your computer without logging out)
 
 
 
-[^]: **Manual Connection**
+Manual Connection
+-----------------
 
 To connect manually open terminal and type the following command replacing the
 bracketed text with your info:
@@ -71,25 +77,22 @@ For example I enter: `ssh -D 56463 hurtige@alpha.ccs.neu.edu`
 
 
 
-Then go to System Preferences \> Network \> (You active internet connection)
+Then go to System Preferences \> Network \> (Your active internet connection)
 
 
 
 Click the `Advanced` button then go to the `Proxies` Tab
 
 
-
-Check `SOCKS Proxy` and enter `localhost` and the poert number in the two boxes
+Check `SOCKS Proxy` and enter `localhost` and the port number in the two boxes
 under `SOCKS Proxy Server`
-
 
 
 Click `OK` then `Apply`
 
 
 
-You are now tunneling all your traffic through ALPHA and you can access
-everything in the crew network.
+Congratulations! You are now tunneling all your traffic through ALPHA and you can access the crew network.
 
 
 
