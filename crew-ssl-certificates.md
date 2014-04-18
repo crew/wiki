@@ -6,7 +6,7 @@ In order to get your computer to trust the Crew SSL certificates you need to ins
 Mac
 ---
 
-1. Go to [foreman](foreman.crew.ccs.neu.edu) using Google Chrome (ignore certificate warning)
+1. Go to [foreman](https://foreman.crew.ccs.neu.edu) using Google Chrome (ignore certificate warning)
 2. Click the red lock with an x on it and switch to the ***connection*** tab
 3. Click on ***Certificate Information*** link
 4. Select on the Puppet CA: foreman.crew.ccs.neu.edu
